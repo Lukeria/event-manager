@@ -1,0 +1,1931 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template" target-language="ru">
+    <body>
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source>
+        <target>Закрыть</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/alert/alert.ts</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.slide-number" datatype="html">
+        <source> Slide <x id="INTERPOLATION" equiv-text="nFocus);
+	priva"/> of <x id="INTERPOLATION_1" equiv-text="iorSubject(fals"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">146,149</context>
+        </context-group>
+        <note priority="1" from="description">Currently selected slide number read by screen reader</note>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source>
+        <target>Предыдущий</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">163,165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source>
+        <target>Следующий</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">183,184</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source>
+        <target>Выбрать месяц</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source>
+        <target>Выбрать год</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source>
+        <target>Предыдущий месяц</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">91,93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source>
+        <target>Следующий месяц</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">290,291</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">301,302</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">315</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">325</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source>
+        <target>Первый</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">343,345</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source>
+        <target>Предыдущий</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">359</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source>
+        <target>Следующий</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">377,378</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source>
+        <target>Последний</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">396</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="onfig.animated;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/progressbar/progressbar.ts</context>
+          <context context-type="linenumber">64,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">233,235</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">251,255</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">270,271</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">289</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">300,301</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">311,314</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">334,338</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">356,357</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">370,371</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">390</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">410,414</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">429,432</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">441</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="ngb.toast.close-aria" datatype="html">
+        <source>Close</source>
+        <target>Закрыть</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/toast/toast.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="5207635742003539443" datatype="html">
+        <source>Sign in</source>
+        <target>Вход в систему</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2454050363478003966" datatype="html">
+        <source>Login</source>
+        <target>Логин</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1258346202212379570" datatype="html">
+        <source>Enter login</source>
+        <target>Введите логин</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1431416938026210429" datatype="html">
+        <source>Password</source>
+        <target>Пароль</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="343410938576058057" datatype="html">
+        <source>Enter password</source>
+        <target>Введите пароль</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="935187492052582731" datatype="html">
+        <source>Submit</source>
+        <target>Войти</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2950600607347308247" datatype="html">
+        <source>Don&apos;t have an account? </source>
+        <target>Еще нет аккаунта? </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3301086086650990787" datatype="html">
+        <source>Register</source>
+        <target>Зарегистрируйтесь</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8309215400025960949" datatype="html">
+        <source>Copyright @<x id="INTERPOLATION" equiv-text="{{ copyrightYear }}"/>.</source>
+        <target>Копирайт @<x id="INTERPOLATION" equiv-text="{{ copyrightYear }}"/>.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1735797636710586214" datatype="html">
+        <source> All rights reserved.</source>
+        <target> Все права защищены.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="required-field-validation" datatype="html">
+        <source>Please fill out this field.</source>
+        <target>Поле обязательно для заполнения.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">26,28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">39,42</context>
+        </context-group>
+      </trans-unit>
+
+      <!-- NAVBAR -->
+      <trans-unit id="3152181218990231704" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-globe&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Translate</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-globe&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Перевести</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3797778920049399855" datatype="html">
+        <source>Logout</source>
+        <target>Выйти</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6425467213960794982" datatype="html">
+        <source>All projects</source>
+        <target>Все проекты</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="6492690912049633374" datatype="html">
+        <source> Overview </source>
+        <target> Обзор </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1557412362123765399" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-speedometer2 me-2&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Dashboard</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-speedometer2 me-2&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Панель управления</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4067760123455292415" datatype="html">
+        <source> Planning tools </source>
+        <target> Инструменты планирования </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5316967139585850106" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-list-task me-2&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Checklists</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-list-task me-2&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Списки задач</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1756236147271631716" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-piggy-bank me-2&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Budget</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-piggy-bank me-2&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Бюджет</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7366252728255751636" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-people-fill me-2&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Guests</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-people-fill me-2&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Гости</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">78,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="520468267935797969" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-envelope-heart me-2&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Invitation</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-envelope-heart me-2&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Приглашение</target>
+        
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+      </trans-unit>
+      <!-- NAVBAR -->
+
+      <!-- BUDGET  -->
+       <trans-unit id="budget-header" datatype="html">
+        <source>Budget</source>
+        <target>Бюджет</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-expected" datatype="html">
+        <source>Expected</source>
+        <target>Ожидается</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-plan" datatype="html">
+        <source>Plan</source>
+        <target>План</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">135,136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-paid" datatype="html">
+        <source>Paid</source>
+        <target>Оплачено</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">139,140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-remain" datatype="html">
+        <source>Remain</source>
+        <target>Остаток</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">143,144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-add-category" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-plus-circle-dotted&quot; (click)=&quot;clearAddBudgetCategory()&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Add category</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-plus-circle-dotted&quot; (click)=&quot;clearAddBudgetCategory()&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Добавить категорию</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="empty-list" datatype="html">
+        <source> Empty list </source>
+        <target> Список пуст </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-edit" datatype="html">
+        <source>Edit</source>
+        <target>Изменить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-delete" datatype="html">
+        <source>Delete</source>
+        <target>Удалить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">76,77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">115,116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-expense-name" datatype="html">
+        <source>Expense name</source>
+        <target>Статья расходов</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">87,88</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">194,195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-description" datatype="html">
+        <source>Description</source>
+        <target>Описание</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">170,171</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">199,200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-paid-amount" datatype="html">
+        <source>Paid amount</source>
+        <target>Оплаченная сумма</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">89,90</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="button-add-payment" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-plus-circle-dotted&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Add payment</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-plus-circle-dotted&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Добавить затраты</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">127,128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-details" datatype="html">
+        <source>Budget category details</source>
+        <target>Детали категории бюджета</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">157,158</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-name" datatype="html">
+        <source>Name</source>
+        <target>Название</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">164,165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-planned-amount" datatype="html">
+        <source>Planned amount</source>
+        <target>Планируемая сумма</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">176,177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-name-placeholder" datatype="html">
+        <source>Enter budget category name</source>
+        <target>Введите название бюджетной категории</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">164,166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-description-placeholder" datatype="html">
+        <source>Enter budget category description</source>
+        <target>Введите описание бюджетной категории</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">172,174</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="budget-planned-placeholder" datatype="html">
+        <source>Enter planned amount</source>
+        <target>Введите планируемую сумму</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">179,181</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-save" datatype="html">
+        <source>Save</source>
+        <target>Сохранить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">180,181</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">209,210</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-payment-details" datatype="html">
+        <source>Payment details</source>
+        <target>Детали оплаты</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">187,188</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-amount" datatype="html">
+        <source>Amount</source>
+        <target>Сумма</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">204,205</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-expense-name-placeholder" datatype="html">
+        <source>Enter expense name</source>
+        <target>Введите название статьи расходов</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">198,200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-expense-description-placeholder" datatype="html">
+        <source>Enter expense description</source>
+        <target>Введите описание статьи расходов</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">204,206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="budget-amount-placeholder" datatype="html">
+        <source>Enter amount</source>
+        <target>Введите сумму расходов</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/budget/budget.component.html</context>
+          <context context-type="linenumber">209,212</context>
+        </context-group>
+      </trans-unit>
+      <!-- BUDGET -->
+
+      <!-- CHECKLIST -->
+       <trans-unit id="checklists-header" datatype="html">
+        <source>Checklists</source>
+        <target>Списки задач</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-add-list" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i
+                            class=&quot;bi bi-plus-circle-dotted&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Add list</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i
+                            class=&quot;bi bi-plus-circle-dotted&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Добавить список</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checklists-till" datatype="html">
+        <source>till <x id="INTERPOLATION" equiv-text="{{task.deadline | date: &apos;short&apos;}}"/></source>
+        <target>до <x id="INTERPOLATION" equiv-text="{{task.deadline | date: &apos;short&apos;}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-add-task" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-plus-circle-dotted&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Add task</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-plus-circle-dotted&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Добавить задачу</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checklist-details" datatype="html">
+        <source>Checklist details</source>
+        <target>Список задач</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">109,110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checklist-name" datatype="html">
+        <source>Name</source>
+        <target>Название</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">116,117</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">140,141</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checklist-name-placeholder" datatype="html">
+        <source>Enter checklist name</source>
+        <target>Введите название списка задач</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">118,120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checklist-description" datatype="html">
+        <source>Description</source>
+        <target>Описание</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">121,122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">145,146</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checklist-description-placeholder" datatype="html">
+        <source>Enter checklist description</source>
+        <target>Введите описание списка задач</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">124,126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checklist-task-name-placeholder" datatype="html">
+        <source>Enter task name</source>
+        <target>Введите название задачи</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">142,144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checklist-task-description-placeholder" datatype="html">
+        <source>Enter task description</source>
+        <target>Введите описание задачи</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">148,150</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checklist-task-deadline" datatype="html">
+        <source>Deadline</source>
+        <target>Срок выполнения</target>
+        
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">151,152</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="input-date-placeholder" datatype="html">
+        <source>yyyy-mm-dd</source>
+        <target>гггг-мм-дд</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">157,158</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input-time" datatype="html">
+        <source>HH:MM</source>
+        <target>ЧЧ:MM</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/checklists/checklists.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <!-- CHECKLIST -->
+
+      <!-- EVENT -->
+      <trans-unit id="project-header" datatype="html">
+        <source>Project overview </source>
+        <target>Информация о проекте </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-invite-participant" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-person-plus&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Invite participant</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-person-plus&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Пригласить участника</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-header" datatype="html">
+        <source>Event information</source>
+        <target>Информация о мероприятии</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-form-edit" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-pencil&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Edit</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-pencil&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Изменить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-name" datatype="html">
+        <source>Name</source>
+        <target>Название</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-name-placeholder" datatype="html">
+        <source>Enter event name</source>
+        <target>Введите название мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-name-validation" datatype="html">
+        <source> Name is invalid </source>
+        <target> Название заполнено неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-type" datatype="html">
+        <source>Type</source>
+        <target>Тип</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-type-validation" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-exclamation-circle &quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Event type must be filled </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-exclamation-circle &quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Тип обязателен для заполнения </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-event/new-event.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-description" datatype="html">
+        <source>Description</source>
+        <target>Описание</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-description-placeholder" datatype="html">
+        <source>Enter event description</source>
+        <target>Введите описание мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-description-validation" datatype="html">
+        <source> Description is invalid </source>
+        <target> Описание заполнено неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-date" datatype="html">
+        <source>Date</source>
+        <target>Дата</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-date-validation" datatype="html">
+        <source> Date is invalid </source>
+        <target> Дата заполнена неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-time" datatype="html">
+        <source>Time</source>
+        <target>Время</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-place" datatype="html">
+        <source>Place</source>
+        <target>Место проведения</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-place-placeholder" datatype="html">
+        <source>Enter event place</source>
+        <target>Введите место проведения мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">87,88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-place-validation" datatype="html">
+        <source> Place is invalid </source>
+        <target> Место проведения заполнено неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-budget" datatype="html">
+        <source>Planned budget</source>
+        <target>Планируемый бюджет</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-budget-placeholder" datatype="html">
+        <source>Enter event planned budget</source>
+        <target>Введите планируемую сумму бюджета</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-budget-validation" datatype="html">
+        <source> Planned budget is invalid </source>
+        <target> Планируемая сумма бюджета заполнена неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">110,111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notifications" datatype="html">
+        <source>Notifications</source>
+        <target>Уведомления</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">128,129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-clear-all" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-trash3&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Clear all</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-trash3&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Очистить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">132,134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification-confirmation" datatype="html">
+        <source>Invitation confirmation</source>
+        <target>Подтверждение присутствия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">141,142</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">148,149</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">155,156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification-date-dif" datatype="html">
+        <source>days ago</source>
+        <target>дней назад</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">142,143</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">149,150</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">156,157</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification-confirmed" datatype="html">
+        <source>Guest confirmed presence</source>
+        <target>Гость подтверждает присутствие</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">144,145</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">158,159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification-declined" datatype="html">
+        <source>Guest declined presence</source>
+        <target>Гость отклоняет присутствие</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">151,152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invite-participant-header" datatype="html">
+        <source>Invite participant</source>
+        <target>Пригласить участника</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">198,199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invite-email-placeholder" datatype="html">
+        <source>Enter participant email</source>
+        <target>Введите email участника</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">208</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invite-email-validation" datatype="html">
+        <source> Email is invalid </source>
+        <target> Email заполнен неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">212,214</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-send" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;spinner-border spinner-border-sm&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;
+                    *ngIf=&quot;isInviteLoading&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Send</source>
+       <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;spinner-border spinner-border-sm&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;
+                    *ngIf=&quot;isInviteLoading&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Отправить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">217,219</context>
+        </context-group>
+      </trans-unit>
+      <!-- EVENT -->
+
+      <!-- EVENTS -->
+      <trans-unit id="dashboard-invite-message" datatype="html">
+        <source>Invitation sent to participant</source>
+        <target>Приглашение успешно отправлено участнику</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="events-header" datatype="html">
+        <source>Events</source>
+        <target>Мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/events/events.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="create-event" datatype="html">
+        <source>Create new event <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-plus-circle fs-4&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <target>Создать новое мероприятие <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-plus-circle fs-4&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/events/events.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="events-details" datatype="html">
+        <source>Details</source>
+        <target>Подробности</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/events/events.component.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <!-- EVENTS -->
+
+      <!-- REGISTER -->
+      <trans-unit id="login-header" datatype="html">
+        <source>Login</source>
+        <target>Вход в систему</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-header" datatype="html">
+        <source>Register </source>
+        <target>Регистрация </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sign-up-header" datatype="html">
+        <source>Sign up</source>
+        <target>Регистрация</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-name" datatype="html">
+        <source>Name</source>
+        <target>Имя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-name-placeholder" datatype="html">
+        <source>Enter user name</source>
+        <target>Введите имя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-name-validation" datatype="html">
+        <source> Name is invalid </source>
+        <target> Имя заполнено неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-surname" datatype="html">
+        <source>Surname</source>
+        <target>Фамилия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-surname-placeholder" datatype="html">
+        <source>Enter user surname</source>
+        <target>Введите фамилию</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-surname-validation" datatype="html">
+        <source> Surname is invalid </source>
+        <target> Фамилия заполнена неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-email" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-email-placeholder" datatype="html">
+        <source>Enter user email</source>
+        <target>Введите email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-email-validation" datatype="html">
+        <source> Email is invalid </source>
+        <target> Email заполнен неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-phone" datatype="html">
+        <source>Phone</source>
+        <target>Телефон</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-phone-placeholder" datatype="html">
+        <source>Enter user phone</source>
+        <target>Введите номер телефона</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-login" datatype="html">
+        <source>Login</source>
+        <target>Логин</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-login-placeholder" datatype="html">
+        <source>Enter user login</source>
+        <target>Введите логин</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-login-validation" datatype="html">
+        <source> Login is invalid </source>
+        <target> Логин заполнен неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-password" datatype="html">
+        <source>Password</source>
+        <target>Пароль</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">78,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-password-placeholder" datatype="html">
+        <source>Enter user password</source>
+        <target>Введите пароль</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">80,81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-password-validation" datatype="html">
+        <source> Password is invalid </source>
+        <target> Пароль заполнен неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-confirmPassword" datatype="html">
+        <source>Confirm password</source>
+        <target>Подтверждение пароля</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-confirmPassword-placeholder" datatype="html">
+        <source>Enter user password confirmation</source>
+        <target>Введите подтверждение пароля</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">93,94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-confirmPassword-validation" datatype="html">
+        <source> Password confirmation is invalid </source>
+        <target> Подтверждение пароля заполнено неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-role-validation" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-exclamation-circle &quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Role must be filled </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-exclamation-circle &quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Роль обязательна для заполнения </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/register/register.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <!-- REGISTER -->
+      
+      <!-- GUESTS -->
+    <trans-unit id="RVSPStatus.Confirmed" datatype="html">
+        <source>Confirmed</source>
+        <target>Подтверждено</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="RVSPStatus.Declined" datatype="html">
+        <source>Declined</source>
+        <target>Отклонено</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="RVSPStatus.Unknown" datatype="html">
+        <source>Unknown</source>
+        <target>Неизвестно</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="guests-header" datatype="html">
+        <source>Guest list</source>
+        <target>Список гостей</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guests-total" datatype="html">
+        <source>Total</source>
+        <target>Всего</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guests-confirmed" datatype="html">
+        <source>Confirmed</source>
+        <target>Подтвержденные</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guests-declined" datatype="html">
+        <source>Declined</source>
+        <target>Отклоненные</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guests-name" datatype="html">
+        <source>First</source>
+        <target>Имя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guests-surname" datatype="html">
+        <source>Last</source>
+        <target>Фамилия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guests-gender" datatype="html">
+        <source>Gender</source>
+        <target>Пол</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guests-RVSP" datatype="html">
+        <source>RVSP status</source>
+        <target>RVSP статус</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guests-email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guest-profile" datatype="html">
+        <source>Profile update</source>
+        <target>Данные гостя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-add-guest" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i
+                        class=&quot;bi bi-plus-circle-dotted&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Add guest</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i
+                        class=&quot;bi bi-plus-circle-dotted&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Добавить гостя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guest-name" datatype="html">
+        <source>Name</source>
+        <target>Имя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">102,103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guest-name-placeholder" datatype="html">
+        <source>Enter guest name</source>
+        <target>Введите имя гостя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guest-surname" datatype="html">
+        <source>Surname</source>
+        <target>Фамилия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">107,108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guest-surname-placeholder" datatype="html">
+        <source>Enter guest surname</source>
+        <target>Введите фамилию гостя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guest-gender" datatype="html">
+        <source>Gender</source>
+        <target>Пол</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guest-gender-placeholder" datatype="html">
+        <source>Select guest gender</source>
+        <target>Выберете пол</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gender-woman" datatype="html">
+        <source>Woman</source>
+        <target>Женщина</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">115,116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="gender-man" datatype="html">
+        <source>Man</source>
+        <target>Мужчина</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">116,117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guest-email-placeholder" datatype="html">
+        <source>Enter guest email</source>
+        <target>Введите email гостя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guests/guests.component.html</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <!-- GUESTS -->
+
+      <!-- INVITATION -->
+       <trans-unit id="invitation-overview-header" datatype="html">
+        <source>Invitation overview</source>
+        <target>Веб-пришлашение</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-main" datatype="html">
+        <source>Main information</source>
+        <target>Основная информация</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-header" datatype="html">
+        <source>Header</source>
+        <target>Заголовок</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-header-placeholder" datatype="html">
+        <source>Enter invitation header</source>
+        <target>Введите заголовок приглашения</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-description" datatype="html">
+        <source>Event Description</source>
+        <target>Описание мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-description-placeholder" datatype="html">
+        <source>Enter event description</source>
+        <target>Введите описание мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-date" datatype="html">
+        <source>Event Date</source>
+        <target>Дата мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-date-placeholder" datatype="html">
+        <source>Enter event date</source>
+        <target>Введите дату мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-time" datatype="html">
+        <source>Event Time</source>
+        <target>Время мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="invitation-time-placeholder" datatype="html">
+        <source>Enter event time</source>
+        <target>Введите время мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-place" datatype="html">
+        <source>Event Place</source>
+        <target>Место проведения</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="invitation-place-placeholder" datatype="html">
+        <source>Enter event place</source>
+        <target>Введите место проведения мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-place-address" datatype="html">
+        <source>Event Place Address</source>
+        <target>Адресс места проведения</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="invitation-place-address-placeholder" datatype="html">
+        <source>Enter event place address</source>
+        <target>Введите адрес места проведения</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-cover-image" datatype="html">
+        <source>Cover image</source>
+        <target>Фоновое изображение</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-cover-image" datatype="html">
+        <source>Open cover image</source>
+        <target>Просмотреть фоновое изображение</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no-cover-image" datatype="html">
+        <source>No cover image</source>
+        <target>Нет фонового изображения</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-not-created" datatype="html">
+        <source> Invitation is not created </source>
+        <target> Веб-пришлашение не создано </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">102,103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-create" datatype="html">
+        <source>Create</source>
+        <target>Создать</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-send-invitation" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;spinner-border spinner-border-sm&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;
+                            *ngIf=&quot;isSendLoading&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Send invitations</source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;spinner-border spinner-border-sm&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;
+        *ngIf=&quot;isSendLoading&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Разослать приглашения</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">110,112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-show" datatype="html">
+        <source>Show</source>
+        <target>Просмотреть</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.html</context>
+          <context context-type="linenumber">108,109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-updated-message" datatype="html">
+        <source>Invitation is updated successfully</source>
+        <target>Веб-пришлашение успешно обновлено</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-created-message" datatype="html">
+        <source>Invitation is created successfully</source>
+        <target>Веб-пришлашение успешно создано</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-sent-message" datatype="html">
+        <source>Invitations sent successfully</source>
+        <target>Веб-пришлашения успешно отправлены</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-cover-image-message" datatype="html">
+        <source>Invitation cover image is saved successfully</source>
+        <target>Фоновое изображение успешно сохранено</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation/invitation.component.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <!-- INVITATION -->
+
+      <!-- INVITATION-RVSP -->
+      <trans-unit id="invitation-venue" datatype="html">
+        <source>Venue of the celebration</source>
+        <target>Место проведения торжества</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation-rvsp/invitation-rvsp.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-attendance" datatype="html">
+        <source>Attendance confirmation</source>
+        <target>Подтверждение присутствия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation-rvsp/invitation-rvsp.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-first-name" datatype="html">
+        <source>First name</source>
+        <target>Имя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation-rvsp/invitation-rvsp.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-last-name" datatype="html">
+        <source>Last name</source>
+        <target>Фамилия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation-rvsp/invitation-rvsp.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-attendance-question" datatype="html">
+        <source>Will you be attending?</source>
+        <target>Будете ли вы присутствовать?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation-rvsp/invitation-rvsp.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-attendance-yes" datatype="html">
+        <source> Yes </source>
+        <target> Да </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation-rvsp/invitation-rvsp.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-attendance-no" datatype="html">
+        <source> No </source>
+        <target> Нет </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation-rvsp/invitation-rvsp.component.html</context>
+          <context context-type="linenumber">66,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invitation-attendance-unknown" datatype="html">
+        <source> Still not sure, I will let you know my decision later </source>
+        <target> Все еще не уверен, я дам вам знать о решении позже </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation-rvsp/invitation-rvsp.component.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-submit-send" datatype="html">
+        <source>Submit</source>
+        <target>Отправить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation-rvsp/invitation-rvsp.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="invitation-rvsp-success-message" datatype="html">
+        <source>Статус подтверждения присутствия успешно отправлен</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/invitation-rvsp/invitation-rvsp.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <!-- INVITATION-RVSP -->
+
+      <trans-unit id="main-menu-header" datatype="html">
+        <source>Main menu</source>
+        <target>Главное меню</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      
+      <!-- REQUESTS -->
+      <trans-unit id="requests-header" datatype="html">
+        <source>Requests</source>
+        <target>Заявки</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="create-request" datatype="html">
+        <source>Create new request </source>
+        <target>Создать новую заявку </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/requests/requests.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-create-event" datatype="html">
+        <source>Create event</source>
+        <target>Создать мероприятие</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/requests/requests.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button-decline" datatype="html">
+        <source>Decline</source>
+        <target>Отклонить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/requests/requests.component.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-name" datatype="html">
+        <source>Event Name</source>
+        <target>Название мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-description" datatype="html">
+        <source>Event Description</source>
+        <target>Описание мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/requests/requests.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-date" datatype="html">
+        <source>Event Date</source>
+        <target>Дата мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/requests/requests.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-time" datatype="html">
+        <source>Event Time</source>
+        <target>Время начала</target>
+         <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">64,65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/requests/requests.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-place" datatype="html">
+        <source>Event Place</source>
+        <target>Место проведения мероприятия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/requests/requests.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-organizer" datatype="html">
+        <source>Organizer</source>
+        <target>Организатор</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/requests/requests.component.html</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-organizer-placeholder" datatype="html">
+        <source>Select event organizer </source>
+        <target>Выберете организатора мероприятия </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-organizer-validation" datatype="html">
+        <source> Organizer is invalid </source>
+        <target> Организатор заполнен неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-participant" datatype="html">
+        <source>Participant</source>
+        <target>Участник</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/requests/requests.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-info-header" datatype="html">
+        <source>Request information</source>
+        <target>Информация о заявке</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="request-name-validation" datatype="html">
+        <source> Event name is invalid </source>
+        <target> Название мероприятия заполнено неверно </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/new-request/new-request.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <!-- REQUESTS -->
+    </body>
+  </file>
+</xliff>

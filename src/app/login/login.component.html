@@ -1,0 +1,66 @@
+<section class="vh-100-custom">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="assets/img/event-manager.jpg" class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 mb-5 mb-lg-0">
+                <form #loginForm="ngForm" (submit)="loginForm.valid && onSubmit()">
+                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                        <p class="fs-4 text-uppercase fw-bold mb-0 me-3">Event <i class="bi bi-flower3"></i> Manager
+                        </p>
+                    </div>
+
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-normal  mx-3 mb-0 fs-5" i18n>Sign in</p>
+                    </div>
+
+                    <!-- Email input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="login" i18n>Login</label>
+                        <input i18n-placeholder type="text" id="login" class="form-control form-control-lg"
+                            [(ngModel)]="newAuthRequest.login" name="login" placeholder="Enter login" #login="ngModel"
+                            [ngClass]="{'is-invalid': loginForm.submitted && (login.invalid || validationErrors?.login)}"
+                            required />
+                        <div *ngIf="loginForm.submitted && login.invalid" class="invalid-feedback"
+                            i18n="@@required-field-validation">Please fill out this
+                            field.</div>
+                    </div>
+
+                    <!-- Password input -->
+                    <div data-mdb-input-init class="form-outline mb-3">
+                        <label class="form-label" for="password" i18n>Password</label>
+                        <input i18n-placeholder type="password" id="password" class="form-control form-control-lg"
+                            [(ngModel)]="newAuthRequest.password" name="password" placeholder="Enter password"
+                            #password="ngModel"
+                            [ngClass]="{'is-invalid': loginForm.submitted && (password.invalid || validationErrors?.password)}"
+                            required />
+                        <div *ngIf="loginForm.submitted && password.invalid" class="invalid-feedback"
+                            i18n="@@required-field-validation">Please fill out
+                            this field.</div>
+
+                    </div>
+
+                    <!-- <div class="d-flex justify-content-between align-items-center">
+                        <div class="form-check mb-0">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                            <label class="form-check-label" for="form2Example3">
+                                Remember me
+                            </label>
+                        </div>
+                        <a href="#!" class="btn btn-link text-body">Forgot password?</a>
+                    </div> -->
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-dark"
+                            style="padding-left: 2.5rem; padding-right: 2.5rem;" type="submit" i18n>Submit</button>
+                        <p class="fw-bold mt-2 pt-1 mb-0"><span i18n>Don't have an account? </span><a
+                                [routerLink]="['/register']" class="link-danger" i18n>Register</a></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</section>

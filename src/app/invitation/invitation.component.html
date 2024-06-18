@@ -1,0 +1,118 @@
+<app-navbar></app-navbar>
+<main class="with-sidebar">
+    <div class="container ">
+        <div class="row mx-3 mx-md-5 mt-5 justify-content-center">
+            <div class="col-12 col-md-10 ">
+                <h3 class="mb-5 mt-3" i18n="@@invitation-overview-header">Invitation overview</h3>
+            </div>
+        </div>
+
+        <div class="row mx-3 mx-md-5 mb-3 justify-content-center" *ngIf="isCreatedMode">
+            <div class="col-12 col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between ">
+                            <h5 class="mb-3" i18n="@@invitation-main">Main information</h5>
+                            <button type="button" (click)="setEditableMode()" class="btn btn-link link-dark"
+                                *ngIf="invitation.id != null" i18n="@@button-form-edit"><i class="bi bi-pencil"></i>
+                                Edit</button>
+                        </div>
+                        <form class="row g-3" (submit)="onInvitationFormSubmit()">
+                            <div class="col-12">
+                                <label for="inputHeader" class="form-label" i18n="@@invitation-header">Header</label>
+                                <input type="text" class="form-control" id="inputHeader"
+                                    [ngStyle]="!isEditable ? {'display':'none'} : {}" [(ngModel)]="invitation.header"
+                                    name="header" placeholder="Enter invitation header"
+                                    i18n-placeholder="@@invitation-header-placeholder">
+                                <p *ngIf="!isEditable">{{invitation.header}}</p>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputEventDescription" class="form-label"
+                                    i18n="@@invitation-description">Event Description</label>
+                                <textarea type="text" class="form-control" id="inputEventDescription"
+                                    [ngStyle]="!isEditable ? {'display':'none'} : {}"
+                                    [(ngModel)]="invitation.eventDescription" name="eventDescription"
+                                    placeholder="Enter event description"
+                                    i18n-placeholder="@@invitation-description-placeholder">
+                                   </textarea>
+                                <p *ngIf="!isEditable">{{invitation.eventDescription}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputEventDate" class="form-label" i18n="@@invitation-date">Event
+                                    Date</label>
+                                <input type="text" class="form-control" id="inputEventDate"
+                                    [ngStyle]="!isEditable ? {'display':'none'} : {}" [(ngModel)]="invitation.eventDate"
+                                    name="eventDate" placeholder="Enter event date"
+                                    i18n-placeholder="@@invitation-date-placeholder">
+                                <p *ngIf="!isEditable">{{invitation.eventDate}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputEventTime" class="form-label" i18n="@@invitation-time">Event
+                                    Time</label>
+                                <input type="text" class="form-control" id="inputEventTime"
+                                    [ngStyle]="!isEditable ? {'display':'none'} : {}" [(ngModel)]="invitation.eventTime"
+                                    name="eventTime" placeholder="Enter event time"
+                                    i18n-placeholder="@@invitation-time-placeholder">
+                                <p *ngIf="!isEditable">{{invitation.eventTime}}</p>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputEventPlace" class="form-label" i18n="@@invitation-place">Event
+                                    Place</label>
+                                <input type="text" class="form-control" id="inputEventPlace"
+                                    [ngStyle]="!isEditable ? {'display':'none'} : {}"
+                                    [(ngModel)]="invitation.eventPlace" name="eventPlace"
+                                    placeholder="Enter event place" i18n-placeholder="@@invitation-place-placeholder">
+                                <p *ngIf="!isEditable">{{invitation.eventPlace}}</p>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputEventPlaceAddress" class="form-label"
+                                    i18n="@@invitation-place-address">Event Place Address</label>
+                                <input type="text" class="form-control" id="inputEventPlaceAddress"
+                                    [ngStyle]="!isEditable ? {'display':'none'} : {}"
+                                    [(ngModel)]="invitation.eventPlaceAddress" name="eventPlaceAddress"
+                                    placeholder="Enter event place address"
+                                    i18n-placeholder="@@invitation-place-address-placeholder">
+                                <p *ngIf="!isEditable">{{invitation.eventPlaceAddress}}</p>
+                            </div>
+                            <div class="col-12" *ngIf="invitation.id != null">
+                                <label for="inputPlace" class="form-label" i18n="@@invitation-cover-image">Cover
+                                    image</label>
+                                <input class="form-control" type="file" id="formFile"
+                                    [ngStyle]="!isEditable ? {'display':'none'} : {}" (change)="onFileSelected($event)">
+                                <p><a *ngIf="!isEditable && invitation.imageUrl != null" [href]="invitation.imageUrl"
+                                        target="_blank" i18n="@@button-cover-image">Open cover image</a></p>
+                                <p *ngIf="!isEditable && invitation.imageUrl == null" i18n="@@no-cover-image">No cover
+                                    image</p>
+
+                            </div>
+                            <div class="col-12" *ngIf="isEditable">
+                                <button type="submit" class="btn btn-dark" i18n="@@button-save">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mx-3 mx-md-5 justify-content-center">
+            <div class="col-12 col-md-10 ">
+                <div class="mb-5" *ngIf="invitation.id == null && isCreatedMode == false"
+                    i18n="@@invitation-not-created">
+                    Invitation is not created
+                </div>
+                <button type="button" class="btn btn-dark me-1" *ngIf="invitation.id == null && isCreatedMode == false"
+                    (click)="isCreatedMode=true; isEditable=true" i18n="@@button-create">Create</button>
+                <div *ngIf="invitation.id != null">
+                    <a [routerLink]="['/invitation-rvsp', eventUuid]" class="btn btn-dark me-1 mb-2" target="_blank"
+                        i18n="@@button-show">Show</a>
+                    <button type="button" class="btn btn-dark me-1 mb-2" (click)="sendInvitations()"
+                        i18n="@@button-send-invitation">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+                            *ngIf="isSendLoading"></span> Send invitations</button>
+                    <!-- <button type="button" class="btn btn-primary me-1" (click)="copyLink()">Copy link</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

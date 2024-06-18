@@ -1,0 +1,20 @@
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-4 mb-5 mb-lg-0 text-center">
+
+                <p class="fs-4 text-uppercase fw-bold mb-3">Event <i class="bi bi-flower3"></i> Manager
+                </p>
+                <p>{{error.status}}</p>
+                <p>{{getErrorMessage()}}</p>
+                <a type="button" class="btn btn-outline-dark mt-3" style=" padding-left: 2.5rem;
+                    padding-right: 2.5rem;" [routerLink]="'/main'">Return</a>
+
+            </div>
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="assets/img/error-page.jpg" class="img-fluid" alt="Sample image">
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</section>

@@ -1,0 +1,33 @@
+.checklist .accordion-item{
+    margin-bottom: 2rem;
+    border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+    border-radius: var(--bs-accordion-border-radius);
+}
+
+.checklist .accordion-header{
+    border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+    border-radius: var(--bs-accordion-border-radius);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.checklist .accordion-button{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.checklist .accordion-header .dropdown{
+    padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+    align-items: center;
+    display: flex;
+}
+
+.checklist .accordion-header .dropdown .btn{
+    padding: 0;
+    line-height: 1rem;
+}
+
+.checklist .strike-through {
+    text-decoration: line-through;
+  }
+  

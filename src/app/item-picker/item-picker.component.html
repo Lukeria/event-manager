@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class='col text-center' *ngFor="let eventType of items">
+            <div class="event-type mx-auto">
+                <input type="radio" name="event-type" [id]="'event-type'+eventType.id" class="d-none event-type"
+                    [value]="eventType.id" (change)="onChange(eventType)" [checked]="eventType.id === selectedItem?.id">
+                <label [htmlFor]="'event-type'+eventType.id">
+                    <img [src]="'assets/img/'+eventType.name+'.jpg'" [alt]="eventType.description"
+                        class="img rounded-circle">
+                    <div class="tick-container">
+                        <div class="tick"><i class="bi bi-check"></i></div>
+                    </div>
+                </label>
+            </div>
+            <p>{{ eventType.description }}</p>
+        </div>
+    </div>
+</div>

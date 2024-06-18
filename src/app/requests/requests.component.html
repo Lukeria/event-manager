@@ -1,0 +1,76 @@
+<app-navbar [withSidebar]="false"></app-navbar>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col my-4 mx-3">
+                <h2 i18n="@@requests-header">Requests</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4" *ngIf="user?.roleName == userRole.User">
+                <div class="card empty-card mx-2 my-4">
+                    <div class="card-body">
+                        <a [routerLink]="'/requests/new'" class="btn-link link-dark d-flex flex-column text-center"
+                            style="text-decoration: none;"><span i18n="@@create-request">Create new request </span>
+                            <i class="bi bi-plus-circle fs-4"></i></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 text-center" *ngIf=" requests.length===0" i18n="@@empty-list">
+                Empty list
+            </div>
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let request of requests">
+                <div class="card event-card mx-2 my-4">
+                    <div class="card-header d-flex">
+                        <h5 class="card-title me-auto">{{ request.eventName }}</h5>
+                        <span class="badge align-self-center"
+                            [ngClass]="getRequestBg(request.status)">{{getRequestStatus(request.status)}}</span>
+                        <div class="dropdown">
+                            <button class="btn btn-link link-dark dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+                            <ul class="dropdown-menu  dropdown-menu-end">
+                                <li *ngIf="user?.roleName == userRole.Organizer && request.status !== status.Declined">
+                                    <button type="button" class="dropdown-item" (click)="createEvent(request)"
+                                        i18n="@@button-create-event">Create
+                                        event</button>
+                                </li>
+                                <li *ngIf="user?.roleName == userRole.Organizer && request.status !== status.Declined">
+                                    <button type="button" class="dropdown-item link-danger"
+                                        (click)="declineRequest(request)" i18n="@@button-decline">Decline</button>
+                                </li>
+                                <li *ngIf="user?.roleName == userRole.User"><button type="button"
+                                        class="dropdown-item link-danger" (click)="deleteRequest(request.id)"
+                                        i18n="@@button-delete">Delete</button></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><span class="fw-bold"><span i18n="@@request-description">Event
+                                    Description</span>: </span>{{ request.eventDescription }}
+                        </p>
+                        <p class="card-text"><span class="fw-bold"><span i18n="@@request-date">Event Date</span>:
+                            </span>{{ request.eventDate }}</p>
+                        <p class="card-text"><span class="fw-bold"><span i18n="@@request-time">Event Time</span>:
+                            </span>{{ request.eventTime }}</p>
+                        <p class="card-text"><span class="fw-bold"><span i18n="@@request-place">Event Place</span>:
+                            </span>{{ request.eventPlace }}</p>
+                        <p class="card-text"><span class="fw-bold"><span i18n="@@request-organizer">Organizer</span>:
+                            </span>{{ request.organizer.name + " " + request.organizer.surname + "("+
+                            request.organizer.email+")"}}</p>
+                        <p class="card-text"><span class="fw-bold"><span
+                                    i18n="@@request-participant">Participant</span>: </span>{{ request.participant.name
+                            }}
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>

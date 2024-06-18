@@ -1,0 +1,118 @@
+<section>
+    <div class="container-fluid ">
+        <div class="row d-flex justify-content-center align-items-center my-3">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="assets/img/register.jpg" class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-5 offset-xl-1 mb-5 mb-lg-0">
+                <div class="card">
+                    <div class="card-body">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                            aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a class="link-danger" [routerLink]="'/login'"
+                                        i18n="@@login-header">Login</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page" i18n="@@register-header">Register
+                                </li>
+                            </ol>
+                        </nav>
+                        <h5 class="mb-3" i18n="@@sign-up-header">Sign up</h5>
+                        <app-item-picker [items]="roles"
+                            (selectedItemEvent)="setSelectedRole($event)"></app-item-picker>
+                        <div *ngIf="registerForm.submitted && (selectedRole==null || validationErrors?.roleId)"
+                            class="invalid-feedback" i18n="@@register-role-validation">
+                            <i class="bi bi-exclamation-circle "></i> Role must be filled
+                        </div>
+                        <form #registerForm="ngForm" class="row g-3" (submit)="registerForm.valid && onSubmit()">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label" i18n="@@register-name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="newUser.name"
+                                    #name="ngModel"
+                                    [ngClass]="{'is-invalid': registerForm.submitted && (name.invalid || validationErrors?.name)}"
+                                    required placeholder="Enter user name"
+                                    i18n-placeholder="@@register-name-placeholder">
+                                <div *ngIf="registerForm.submitted && name.invalid" class="invalid-feedback"
+                                    i18n="@@register-name-validation">
+                                    Name is invalid
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="surname" class="form-label" i18n="@@register-surname">Surname</label>
+                                <input type="text" class="form-control" id="surname" name="surname"
+                                    [(ngModel)]="newUser.surname" #surname="ngModel"
+                                    [ngClass]="{'is-invalid': registerForm.submitted && (surname.invalid || validationErrors?.surname)}"
+                                    required placeholder="Enter user surname"
+                                    i18n-placeholder="@@register-surname-placeholder">
+                                <div *ngIf="registerForm.submitted && surname.invalid" class="invalid-feedback"
+                                    i18n="@@register-surname-validation">
+                                    Surname is invalid
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label" i18n="@@register-email">Email</label>
+                                <input type="text" class="form-control" id="email" name="email"
+                                    [(ngModel)]="newUser.email" #email="ngModel"
+                                    [ngClass]="{'is-invalid': registerForm.submitted && (email.invalid || validationErrors?.email)}"
+                                    required placeholder="Enter user email"
+                                    i18n-placeholder="@@register-email-placeholder">
+                                <div *ngIf="registerForm.submitted && email.invalid" class="invalid-feedback"
+                                    i18n="@@register-email-validation">
+                                    Email is invalid
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label" i18n="@@register-phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" name="phone"
+                                    [(ngModel)]="newUser.phone" #phone="ngModel" placeholder="Enter user phone"
+                                    i18n-placeholder="@@register-phone-placeholder">
+                            </div>
+                            <div class="col-12">
+                                <label for="login" class="form-label" i18n="@@register-login">Login</label>
+                                <input type="text" class="form-control" id="login" name="login"
+                                    [(ngModel)]="newUser.login" #login="ngModel" placeholder="Enter user login" required
+                                    [ngClass]="{'is-invalid': registerForm.submitted && (login.invalid || validationErrors?.login)}"
+                                    i18n-placeholder="@@register-login-placeholder">
+                                <div *ngIf="registerForm.submitted && login.invalid" class="invalid-feedback"
+                                    i18n="@@register-login-validation">
+                                    Login is invalid
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="password" class="form-label" i18n="@@register-password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    [(ngModel)]="newUser.password" #password="ngModel" placeholder="Enter user password"
+                                    required
+                                    [ngClass]="{'is-invalid': registerForm.submitted && (password.invalid || validationErrors?.password)}"
+                                    i18n-placeholder="@@register-password-placeholder">
+                                <div *ngIf="registerForm.submitted && password.invalid" class="invalid-feedback"
+                                    i18n="@@register-password-validation">
+                                    Password is invalid
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="confirmPassword" class="form-label"
+                                    i18n="@@register-confirmPassword">Confirm password</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                                    [(ngModel)]="newUser.confirmPassword" #confirmPassword="ngModel"
+                                    placeholder="Enter user password confirmation" required
+                                    [ngClass]="{'is-invalid': registerForm.submitted && (confirmPassword.invalid || validationErrors?.confirmPassword)}"
+                                    i18n-placeholder="@@register-confirmPassword-placeholder">
+                                <div *ngIf="registerForm.submitted && confirmPassword.invalid" class="invalid-feedback"
+                                    i18n="@@register-confirmPassword-validation">
+                                    Password confirmation is invalid
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-dark" i18n="@@button-save">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+</section>

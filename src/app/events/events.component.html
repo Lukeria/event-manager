@@ -1,0 +1,57 @@
+<app-navbar [withSidebar]="false"></app-navbar>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col my-4 mx-3">
+                <h2 i18n="@@events-header">Events</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4" *ngIf="user?.roleName === userRole.Organizer">
+                <div class="card empty-card mx-2 my-4">
+                    <div class="card-body">
+                        <a [routerLink]="'/events/new'" class="btn-link link-dark d-flex flex-column text-center"
+                            style="text-decoration: none;" i18n="@@create-event">Create
+                            new event <i class="bi bi-plus-circle fs-4"></i></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 text-center" *ngIf=" events.length===0" i18n="@@empty-list">
+                Empty list
+            </div>
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let event of events">
+                <div class="card event-card mx-2 my-4">
+                    <div class="card-header d-flex">
+                        <h5 class="card-title me-auto">{{ event.name }}</h5>
+                        <div class="dropdown" *ngIf="user?.roleName === userRole.Organizer">
+                            <button class="btn btn-link link-dark dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+                            <ul class="dropdown-menu  dropdown-menu-end">
+                                <li><button type="button" class="dropdown-item link-danger"
+                                        (click)="deleteEvent(event.id)" i18n="@@button-delete">Delete</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{ event.description }}</p>
+                        <a [routerLink]="['/dashboard', event.uuid]" class="btn btn-outline-dark"
+                            i18n="@@events-details">Details</a>
+                    </div>
+
+                    <div class="event-date-body">
+                        <div class="date text-center text-uppercase">
+                            {{ event.date | date:'MMM' }}<span class="h3 mb-0">{{ event.date | date:'dd' }}</span>{{
+                            event.date | date:'yyyy' }}
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>

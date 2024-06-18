@@ -1,0 +1,221 @@
+<app-navbar></app-navbar>
+<main class="with-sidebar">
+    <div class="container-fluid">
+        <div class="row mx-md-4 mt-5">
+            <div class="col-12 col-md-8 order-2 order-md-1">
+                <div class="d-flex flex-row mb-5 mt-3 mx-3 flex-column flex-lg-row">
+                    <h3 class="me-auto" i18n="@@project-header">Project overview </h3>
+                    <button class="btn btn-outline-dark mt-3 mt-lg-0" (click)="open(content)"
+                        i18n="@@button-invite-participant" style="max-width: 15em;"><i class="bi bi-person-plus"></i>
+                        Invite participant</button>
+
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between ">
+                            <h5 class="mb-3" i18n="@@event-header">Event information</h5>
+                            <button type="button" (click)="setEditableMode()" class="btn btn-link link-dark"
+                                i18n="@@button-form-edit"><i class="bi bi-pencil"></i> Edit</button>
+                        </div>
+                        <form #eventForm="ngForm" class="row g-3" (submit)="eventForm.valid && onSubmit()">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label" i18n="@@event-name">Name</label>
+                                <input type="text" class="form-control" id="eventName" [(ngModel)]="event.name"
+                                    name="eventName" #name="ngModel" placeholder="Enter event name"
+                                    i18n-placeholder="@@event-name-placeholder"
+                                    [ngClass]="{'is-invalid': eventForm.submitted && (name.invalid || validationErrors?.name)}"
+                                    required [ngStyle]="!isEditable ? {'display':'none'} : {}">
+                                <p *ngIf="!isEditable">{{ event.name }}</p>
+                                <div *ngIf="isEditable && eventForm.submitted && name.invalid" class="invalid-feedback"
+                                    i18n="@@event-name-validation">
+                                    Name is invalid
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputType" class="form-label" i18n="@@event-type">Type</label>
+                                <input type="text" class="form-control" id="inputType" disabled
+                                    [(ngModel)]="event.type.description" name="type.name"
+                                    [ngStyle]="!isEditable ? {'display':'none'} : {}">
+                                <p *ngIf="!isEditable">{{ event.type.description }}</p>
+                            </div>
+                            <div class="col-12">
+                                <label for="description" class="form-label"
+                                    i18n="@@event-description">Description</label>
+                                <textarea type="text" class="form-control" id="description"
+                                    [(ngModel)]="event.description" name="description" #description="ngModel"
+                                    [ngClass]="{'is-invalid': eventForm.submitted && (description.invalid || validationErrors?.description)}"
+                                    required [ngStyle]="!isEditable ? {'display':'none'} : {}"
+                                    i18n-placeholder="@@event-description-placeholder"
+                                    placeholder="Enter event description"></textarea>
+                                <p *ngIf="!isEditable">{{ event.description }}</p>
+                                <div *ngIf="isEditable && eventForm.submitted && description.invalid"
+                                    class="invalid-feedback" i18n="@@event-description-validation">
+                                    Description is invalid
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="date" class="form-label" i18n="@@event-date">Date</label>
+                                <div class="input-group" [ngStyle]="!isEditable ? {'display':'none'} : {}">
+                                    <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="selectedDate"
+                                        (ngModelChange)="onDateChanged()" name="date" ngbDatepicker #d="ngbDatepicker"
+                                        id="date" #date="ngModel"
+                                        [ngClass]="{'is-invalid': eventForm.submitted && (date.invalid || validationErrors?.date)}"
+                                        required i18n-placeholder="@@input-date-placeholder" />
+                                    <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()"
+                                        type="button"></button>
+                                </div>
+                                <p *ngIf="!isEditable">{{ event.date | date }}</p>
+                                <div *ngIf="isEditable && eventForm.submitted && date.invalid" class="invalid-feedback"
+                                    i18n="@@event-date-validation">
+                                    Date is invalid
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="inputTime" class="form-label" i18n="@@event-time">Time</label>
+                                <input type="text" class="form-control" id="inputTime" [(ngModel)]="event.time"
+                                    name="time" [ngStyle]="!isEditable ? {'display':'none'} : {}"
+                                    i18n-placeholder="@@input-time" placeholder="HH:MM">
+                                <p *ngIf="!isEditable">{{ event.time }}</p>
+                            </div>
+                            <div class="col-12">
+                                <label for="place" class="form-label" i18n="@@event-place">Place</label>
+                                <input type="text" class="form-control" id="place" [(ngModel)]="event.place"
+                                    name="place" #place="ngModel"
+                                    [ngClass]="{'is-invalid': eventForm.submitted && (place.invalid || validationErrors?.place)}"
+                                    required [ngStyle]="!isEditable ? {'display':'none'} : {}"
+                                    i18n-placeholder="@@event-place-placeholder" placeholder="Enter event place">
+                                <p *ngIf="!isEditable">{{ event.place }}</p>
+                                <div *ngIf="isEditable && eventForm.submitted && place.invalid" class="invalid-feedback"
+                                    i18n="@@event-place-validation">
+                                    Place is invalid
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputBudget" class="form-label" i18n="@@event-budget">Planned budget</label>
+                                <div class="input-group" [ngStyle]="!isEditable ? {'display':'none'} : {}">
+                                    <div class="input-group-text">{{currencySymbol}}
+                                    </div>
+                                    <input type="number" class="form-control" id="plannedBudgetAmount"
+                                        [(ngModel)]="event.plannedBudgetAmount" name="plannedBudgetAmount"
+                                        #plannedBudgetAmount="ngModel"
+                                        [ngClass]="{'is-invalid': eventForm.submitted && (plannedBudgetAmount.invalid || validationErrors?.plannedBudgetAmount)}"
+                                        required i18n-placeholder="@@event-budget-placeholder"
+                                        placeholder="Enter event planned budget" />
+                                </div>
+                                <p *ngIf="!isEditable">{{ event.plannedBudgetAmount | currency: currencyCode: 'symbol' :
+                                    '1.0-2'}}</p>
+                                <div *ngIf="eventForm.submitted && plannedBudgetAmount.invalid" class="invalid-feedback"
+                                    i18n="@@event-budget-validation">
+                                    Planned budget is invalid
+                                </div>
+                            </div>
+                            <div class="col-12" *ngIf="isEditable">
+                                <button type="submit" class="btn btn-dark" i18n="@@button-save">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 order-1 order-md-2">
+
+                <div class="mb-5">
+                    <div class="d-flex flex-row mb-5 mt-3 mx-3 flex-column flex-lg-row">
+                        <div class="me-auto" style="position: relative;">
+                            <!-- <span class="position-absolute top-0 badge rounded-pill bg-secondary" style="left: -2em">
+                                3
+                            </span> -->
+                            <h3 i18n="@@notifications">Notifications</h3>
+                        </div>
+                        <button class="btn btn-outline-danger mt-3 mt-lg-0" style="max-width: 12em;"
+                            i18n="@@button-clear-all">
+                            <i class="bi bi-trash3"></i> Clear all</button>
+
+                    </div>
+
+
+                    <div class="list-group notification-group">
+
+                        <!-- <div class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between flex-row flex-md-column flex-lg-row">
+                                <h6 class="mb-1" i18n="@@notification-confirmation">Invitation confirmation</h6>
+                                <small>2 <span i18n="@@notification-date-dif">days ago</span></small>
+                            </div>
+                            <small i18n="@@notification-confirmed">Guest confirmed presence</small>
+                        </div>
+                        <div class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between flex-row flex-md-column flex-lg-row">
+                                <h6 class="mb-1" i18n="@@notification-confirmation">Invitation confirmation</h6>
+                                <small>3 <span i18n="@@notification-date-dif">days ago</span></small>
+                            </div>
+                            <small i18n="@@notification-declined">Guest declined presence</small>
+                        </div>
+                        <div class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between flex-row flex-md-column flex-lg-row">
+                                <h6 class="mb-1" i18n="@@notification-confirmation">Invitation confirmation</h6>
+                                <small>5 <span i18n="@@notification-date-dif">days ago</span></small>
+                            </div>
+                            <small i18n="@@notification-confirmed">Guest confirmed presence</small>
+                        </div> -->
+
+
+                    </div>
+
+                </div>
+                <div class="mb-5">
+                    <h3 class="mb-5 mt-3 mx-3" i18n="@@checklists-header">Checklists</h3>
+                    <div class="mx-3" *ngIf="checklistProgress.length===0" i18n="@@empty-list">
+                        Empty list
+                    </div>
+                    <ol class="list-group">
+                        <li class="list-group-item" *ngFor="let progress of checklistProgress">
+                            <div class=" d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">{{progress.checklist.name}}</div>
+                                    {{progress.checklist.description}}
+                                </div>
+                                <span class="badge text-bg-danger rounded-pill">{{progress.valueNow + '/' +
+                                    progress.valueMax}}</span>
+                            </div>
+                            <div class="progress my-2" role="progressbar" aria-label="Checklist progress"
+                                [attr.aria-valuenow]="progress.valueNow" aria-valuemin="0"
+                                [attr.aria-valuemax]="progress.valueMax">
+                                <div class="progress-bar bg-danger"
+                                    [style]="'width: '+(progress.valueMax === 0 ? 0 :progress.valueNow/progress.valueMax*100)+'%'">
+                                    {{progress.valueMax === 0 ? '' : (progress.valueNow/progress.valueMax*100 | number:
+                                    '1.0-0') + "%"}}</div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title" i18n="@@invite-participant-header">Invite participant</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <form #inviteForm="ngForm" (submit)="inviteForm.valid && onInvitationFormSubmit(modal)">
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="email">Email</label>
+                <input id="email" class="form-control" name="email" type="email" [(ngModel)]="inviteEmail"
+                    #email="ngModel"
+                    [ngClass]="{'is-invalid': inviteForm.submitted && (email.invalid || validationErrors?.email)}"
+                    required placeholder="Enter participant email" i18n-placeholder="@@invite-email-placeholder" />
+            </div>
+            <div *ngIf="inviteForm.submitted && email.invalid" class="invalid-feedback"
+                i18n="@@invite-email-validation">
+                Email is invalid
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-dark" i18n="@@button-send">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+                    *ngIf="isInviteLoading"></span> Send</button>
+        </div>
+    </form>
+</ng-template>

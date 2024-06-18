@@ -4,6 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "event-manager": {
+      
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -19,10 +20,20 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n":{
+        "sourceLocale": "en-US",
+        "locales": {
+          "ru": {
+            "translation": "src/locale/messages.ru.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": true,
+            "i18nMissingTranslation": "error",
             "outputPath": "dist/event-manager",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -35,17 +46,44 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
+            "ru":{
+              "localize": ["ru"],
+              "baseHref": "/",
+              "outputPath": "dist/event-manager/ru",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.ru.ts"
+                }
+              ]
+            },
+            "en":{
+              "localize": ["en-US"],
+              "baseHref": "/",
+              "outputPath": "dist/event-manager/en",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.en.ts"
+                }
+              ]
+            },
             "production": {
+              "localize": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -53,12 +91,24 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -66,6 +116,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "ru":{
+              "buildTarget": "event-manager:build:ru"
+            },
+            "en":{
+              "buildTarget": "event-manager:build:en"
+            },
             "production": {
               "buildTarget": "event-manager:build:production"
             },
@@ -78,7 +134,9 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "event-manager:build"
+            "buildTarget": "event-manager:build",
+            "format": "xlf",
+            "outputPath": "src/locale"
           }
         },
         "test": {

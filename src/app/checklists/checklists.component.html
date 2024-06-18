@@ -1,0 +1,176 @@
+<app-navbar></app-navbar>
+<main class="with-sidebar">
+    <div class="container ">
+        <div class="row mx-3 mx-md-5 mt-5 justify-content-center">
+            <div class="col-12 col-md-10 ">
+                <h3 class="mb-5 mt-3" i18n="@@checklists-header">Checklists</h3>
+            </div>
+        </div>
+        <div class="row mx-3 mx-md-5 mb-2 justify-content-center">
+            <div class="col-12 col-md-10 ">
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-outline-dark" data-bs-toggle="offcanvas" href="#addListForm" role="button"
+                        aria-controls="addListForm" (click)="clearAddListForm()" i18n="@@button-add-list"><i
+                            class="bi bi-plus-circle-dotted"></i> Add list</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mx-3 mx-md-5 justify-content-center">
+            <div class="col-12 col-md-10 ">
+                <div *ngIf="checklists.length===0" i18n="@@empty-list">
+                    Empty list
+                </div>
+                <div class="accordion checklist" id="accordionChecklist">
+                    <div class="accordion-item" *ngFor="let checklist of checklists">
+                        <h2 class="accordion-header">
+                            <div class="d-flex justify-content-between ">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    [attr.data-bs-target]="'#checklistTasks-'+checklist.id" aria-expanded="true"
+                                    [attr.aria-controls]="'checklistTasks-'+checklist.id">
+                                    {{checklist.name}}
+                                </button>
+                                <div class="dropdown">
+                                    <button class="btn btn-link link-dark dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                    </button>
+                                    <ul class="dropdown-menu  dropdown-menu-end">
+                                        <li><button class="dropdown-item" data-bs-toggle="offcanvas"
+                                                data-bs-target="#addListForm" aria-controls="addListForm"
+                                                (click)="editChecklist(checklist)" i18n="@@button-edit">Edit</button>
+                                        </li>
+                                        <li><button class="dropdown-item link-danger"
+                                                (click)="deleteChecklist(checklist.id)"
+                                                i18n="@@button-delete">Delete</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </h2>
+                        <div [id]="'checklistTasks-'+checklist.id" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+
+                                <ul class="list-group">
+                                    <li class="list-group-item" *ngFor="let task of checklist.taskList">
+                                        <span class="badge" [ngClass]="getTaskBg(task)">{{getTaskStatus(task)}}</span>
+                                        <div class="d-flex w-100 align-items-center">
+                                            <input class="form-check-input me-2 mt-0" type="checkbox" value=""
+                                                [id]="'taskStatus'+task.id" [(ngModel)]="task.isChecked"
+                                                (change)="onTaskStatusChange(checklist.id, task)">
+                                            <label class="form-check-label me-auto fs-6 fw-bold"
+                                                [for]="'taskStatus'+task.id"
+                                                [ngClass]="{ 'strike-through': task.isChecked }">{{task.name}}</label>
+                                            <div class="dropdown">
+                                                <button class="btn btn-link link-dark dropdown-toggle" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                                <ul class="dropdown-menu  dropdown-menu-end">
+                                                    <li><button class="dropdown-item" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#addTaskForm" aria-controls="addListForm"
+                                                            (click)="editTask(checklist.id, task)"
+                                                            i18n="@@button-edit">Edit</button></li>
+                                                    <li><button class="dropdown-item link-danger"
+                                                            (click)="deleteTask(checklist.id, task.id)"
+                                                            i18n="@@button-delete">Delete</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column flex-md-row justify-content-between d">
+                                            <small>{{task.description}}</small>
+                                            <small [ngClass]="isExpired(task.deadline)? 'text-danger': 'text-secondary'"
+                                                i18n="@@checklists-till">till
+                                                {{task.deadline | date: 'short'}}</small>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-flex justify-content-end me-1 mb-1">
+                                <a class="btn btn-link link-dark" data-bs-toggle="offcanvas" href="#addTaskForm"
+                                    role="button" aria-controls="addTaskForm" (click)="openAddTaskForm(checklist.id)"
+                                    i18n="@@button-add-task"><i class="bi bi-plus-circle-dotted"></i> Add task</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="addListForm" aria-labelledby="addListFormLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="addListFormLabel" i18n="@@checklist-details">Checklist details</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+            (click)="clearAddListForm()"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form id="checklistForm" #addChecklistForm="ngForm" (submit)="onAddChecklistFormSubmit()">
+            <div class="mb-3">
+                <label for="checklistName" class="form-label" i18n="@@checklist-name">Name</label>
+                <input type="text" class="form-control" id="checklistName" [(ngModel)]="newChecklist.name" name="name"
+                    i18n-placeholder="@@checklist-name-placeholder" placeholder="Enter checklist name">
+            </div>
+            <div class="mb-3">
+                <label for="checklistDescription" class="form-label" i18n="@@checklist-description">Description</label>
+                <textarea class="form-control" id="checklistDescription" [(ngModel)]="newChecklist.description"
+                    name="description" i18n-placeholder="@@checklist-description-placeholder"
+                    placeholder="Enter checklist description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark" i18n="@@button-save">Save</button>
+        </form>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="addTaskForm" aria-labelledby="addTaskFormLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="addTaskFormLabel">Task details</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+            (click)="clearAddTaskForm()"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form id="taskForm" #addTaskForm="ngForm" (submit)="onAddTaskFormSubmit()">
+            <div class="mb-3">
+                <label for="taskName" class="form-label" i18n="@@checklist-name">Name</label>
+                <input type="text" class="form-control" id="taskName" [(ngModel)]="newTask.name" name="name"
+                    i18n-placeholder="@@checklist-task-name-placeholder" placeholder="Enter task name">
+            </div>
+            <div class="mb-3">
+                <label for="taskDescription" class="form-label" i18n="@@checklist-description">Description</label>
+                <textarea class="form-control" id="taskDescription" [(ngModel)]="newTask.description" name="description"
+                    i18n-placeholder="@@checklist-task-description-placeholder"
+                    placeholder="Enter task description"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="taskDeadline" class="form-label" i18n="@@checklist-task-deadline">Deadline</label>
+                <!-- <input type="text" class="form-control" id="taskDeadline" [(ngModel)]="newTask.deadline"
+                    name="deadline"> -->
+                <div class="row">
+                    <div class="col-6 ">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd"
+                                i18n-placeholder="@@input-date-placeholder" [(ngModel)]="selectedDate"
+                                (ngModelChange)="onDateChanged()" name="selectedDate" ngbDatepicker #d="ngbDatepicker"
+                                id="taskDeadline" />
+                            <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()"
+                                type="button"></button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="inputTime" [(ngModel)]="selectedTime"
+                            (ngModelChange)="onDateChanged()" name="selectedTime" placeholder="HH:MM"
+                            i18n-placeholder="@@input-time">
+                    </div>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-dark" i18n="@@button-save">Save</button>
+        </form>
+    </div>
+</div>

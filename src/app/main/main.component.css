@@ -1,0 +1,34 @@
+.empty-card{
+    height: 14rem !important;
+    border-style: dashed;
+    border-width: 3px;
+    transition: all 1.1s;
+    position: relative;
+}
+
+.empty-card::before {
+    content: '';
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+    width: 100%;
+    border-bottom: 3px dashed var(--bs-border-color-translucent);
+  }
+
+.empty-card .card-body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.empty-card .bi-folder2-open,
+.empty-card:hover .bi-folder2{
+    display: none;
+}
+
+.empty-card:hover .bi-folder2-open,
+.empty-card .bi-folder2{
+    display: inline;
+}

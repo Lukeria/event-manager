@@ -1,0 +1,42 @@
+.empty-card{
+    height: 14rem !important;
+    border-style: dashed;
+    border-width: 3px;
+}
+
+.empty-card .card-body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card{
+    transition: all 1.1s;
+    min-height: 14rem !important;
+    max-height: 14rem !important;
+    overflow: hidden;
+}
+
+.event-card:hover{
+    transform: scale(1.05);
+    transition: all 1.1s;
+    z-index: 2;
+    overflow: auto;
+    max-height: 28rem !important;
+    height: fit-content !important;
+}
+
+.dropdown .btn-link::after{
+    display: none;
+}
+
+.dropdown-item:active {
+    color: var(--bs-dropdown-link-hover-color);
+    background-color: #dbdee0ad;
+}
+
+.card-body .btn{
+    position: absolute;
+    bottom: 1em;
+}

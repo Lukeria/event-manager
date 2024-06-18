@@ -1,0 +1,50 @@
+.budget-total .label{
+    margin: 0;
+}
+
+.budget-total .amount{
+    line-height: 0.8em;
+}
+
+.budget .accordion-header .dropdown{
+    /* color: var(--bs-accordion-active-color); */
+    /* background-color: var(--bs-accordion-active-bg); */
+    padding: 0.2em;
+}
+
+.budget.accordion:not(:first-child){
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-inner-border-radius: 0;
+}
+
+.budget .accordion-header{
+    border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+    border-radius: var(--bs-accordion-border-radius);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.budget .accordion-button{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.budget .accordion-body{
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.budget .accordion-item{
+    margin-bottom: 2rem;
+}
+
+.budget .table > tbody {
+    vertical-align: middle;
+}
+
+td{
+    word-wrap: break-word;  
+    white-space: normal;
+}

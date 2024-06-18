@@ -1,0 +1,93 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <!-- offcanvas trigger -->
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
+            role="button" aria-controls="sidebarMenu" *ngIf="withSidebar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- offcanvas trigger -->
+        <a class="navbar-brand fw-bold text-uppercase me-auto ms-3" [routerLink]="'/main'">Event <i
+                class="bi bi-flower3"></i>
+            Manager</a>
+
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="bi bi-person-fill"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-text" *ngIf="user"> {{user.name + ' ' + user.surname}}
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <!-- <li><button type="button" class="dropdown-item" (click)="switchLocale()" i18n><i
+                                class="bi bi-globe"></i> Translate</button></li> -->
+                    <li><a href="/event-manager/ru/" class="dropdown-item">Русский</a></li>
+                    <li><a href="/event-manager/en-US/" class="dropdown-item">English</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><button type="button" class="dropdown-item" (click)="onLogout()" i18n>Logout</button></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<!-- navbar -->
+
+<!-- offcanvas -->
+<div class="offcanvas offcanvas-start sidebar-nav bg-dark text-white" tabindex="-1" id="sidebarMenu"
+    aria-labelledby="sidebarMenuLabel" *ngIf="withSidebar">
+    <div class="offcanvas-body">
+        <nav class="navbar-dark">
+            <ul class="navbar-nav">
+                <div class="d-flex justify-content-between align-items-center">
+                    <li>
+                        <a [routerLink]="'/events'" class="btn btn-outline-light" i18n>All projects</a>
+                    </li>
+                    <li>
+                        <button type="button" class="btn-close link-light" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </li>
+                </div>
+
+                <li class="nav-text text-uppercase small fw-bold mt-3" i18n>
+                    Overview
+                </li>
+                <li>
+                    <a [routerLink]="['/dashboard', uuid]" routerLinkActive="active" class="nav-link" i18n>
+                        <i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+                </li>
+                <li class="my-4">
+                    <hr class="dropdown-divider" />
+                </li>
+                <li class="nav-text text-uppercase small fw-bold" i18n>
+                    Planning tools
+                </li>
+                <li *ngIf="user?.roleName == userRole.Organizer">
+                    <a [routerLink]="['/checklists', uuid]" routerLinkActive="active" class="nav-link" i18n>
+                        <i class="bi bi-list-task me-2"></i>Checklists</a>
+                </li>
+                <li *ngIf="user?.roleName == userRole.Organizer">
+                    <a [routerLink]="['/budget', uuid]" routerLinkActive="active" class="nav-link" i18n>
+                        <i class="bi bi-piggy-bank me-2"></i>Budget</a>
+                </li>
+                <li *ngIf="user?.roleName == userRole.User">
+                    <a [routerLink]="['/guests', uuid]" routerLinkActive="active" class="nav-link" i18n>
+                        <i class="bi bi-people-fill me-2"></i>Guests</a>
+                </li>
+                <li *ngIf="user?.roleName == userRole.User">
+                    <a [routerLink]="['/invitation-overview', uuid]" routerLinkActive="active" class="nav-link" i18n>
+                        <i class="bi bi-envelope-heart me-2"></i>Invitation</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+</div>
+<!-- offcanvas -->

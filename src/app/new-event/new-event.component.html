@@ -1,0 +1,112 @@
+<app-navbar [withSidebar]="false"></app-navbar>
+<main>
+    <div class="container">
+        <div class="row  justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 my-4 mx-3">
+                <div class="card">
+                    <div class="card-body">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                            aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item "><a [routerLink]="'/events'"><span
+                                            i18n="@@events-header">Events</span></a></li>
+                                <li class="breadcrumb-item active" aria-current="page" i18n="@@event-header">Event
+                                    information</li>
+                            </ol>
+                        </nav>
+                        <h5 class="mb-3" i18n="@@event-header">Event information</h5>
+                        <div class="mt-5 mb-4">
+                            <app-item-picker [items]="eventTypes" (selectedItemEvent)="setSelectedEventType($event)"
+                                [selectedItem]="selectedEventType"></app-item-picker>
+                            <div *ngIf="eventForm.submitted && (selectedEventType==null || validationErrors?.type)"
+                                class="invalid-feedback" i18n="@@event-type-validation">
+                                <i class="bi bi-exclamation-circle "></i> Event type must be filled
+                            </div>
+                        </div>
+
+                        <form #eventForm="ngForm" class="row g-3" (submit)="eventForm.valid && onSubmit()">
+                            <div class="col-12">
+                                <label for="name" class="form-label" i18n="@@event-name">Name</label>
+                                <input type="text" class="form-control" id="name" [(ngModel)]="newEvent.name"
+                                    name="name" #name="ngModel"
+                                    [ngClass]="{'is-invalid': eventForm.submitted && (name.invalid || validationErrors?.name)}"
+                                    required placeholder="Enter event name"
+                                    i18n-placeholder="@@event-name-placeholder" />
+                                <div *ngIf="eventForm.submitted && name.invalid" class="invalid-feedback"
+                                    i18n="@@event-name-validation">
+                                    Name is invalid
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="description" class="form-label"
+                                    i18n="@@event-description">Description</label>
+                                <textarea type="text" class="form-control" id="description"
+                                    [(ngModel)]="newEvent.description" name="description" #description="ngModel"
+                                    [ngClass]="{'is-invalid': eventForm.submitted && (description.invalid || validationErrors?.description)}"
+                                    required i18n-placeholder="@@event-description-placeholder"
+                                    placeholder="Enter event description"></textarea>
+                                <div *ngIf="eventForm.submitted && description.invalid" class="invalid-feedback"
+                                    i18n="@@event-description-validation">
+                                    Description is invalid
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="date" class="form-label" i18n="@@event-date">Date</label>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="selectedDate"
+                                        (ngModelChange)="onDateChanged()" name="date" ngbDatepicker #d="ngbDatepicker"
+                                        id="inputDate" #date="ngModel"
+                                        [ngClass]="{'is-invalid': eventForm.submitted && (date.invalid || validationErrors?.date)}"
+                                        required i18n-placeholder="@@input-date-placeholder" />
+                                    <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()"
+                                        type="button"></button>
+                                </div>
+                                <div *ngIf="eventForm.submitted && date.invalid" class="invalid-feedback"
+                                    i18n="@@event-date-validation">
+                                    Date is invalid
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="inputTime" class="form-label" i18n="@@event-time">Time</label>
+                                <input type="text" class="form-control" id="inputTime" [(ngModel)]="newEvent.time"
+                                    name="time" i18n-placeholder="@@input-time" placeholder="HH:MM">
+                            </div>
+                            <div class="col-12">
+                                <label for="place" class="form-label" i18n="@@event-place">Place</label>
+                                <input type="text" class="form-control" id="place" [(ngModel)]="newEvent.place"
+                                    name="place" #place="ngModel"
+                                    [ngClass]="{'is-invalid': eventForm.submitted && (place.invalid || validationErrors?.place)}"
+                                    required i18n-placeholder="@@event-place-placeholder"
+                                    placeholder="Enter event place" />
+                                <div *ngIf="eventForm.submitted && place.invalid" class="invalid-feedback"
+                                    i18n="@@event-place-validation">
+                                    Place is invalid
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="plannedBudgetAmount" class="form-label" i18n="@@event-budget">Planned
+                                    budget</label>
+                                <div class="input-group">
+                                    <div class="input-group-text">{{currencySymbol}}</div>
+                                    <input type="number" class="form-control" id="plannedBudgetAmount"
+                                        [(ngModel)]="newEvent.plannedBudgetAmount" name="plannedBudgetAmount"
+                                        #plannedBudgetAmount="ngModel"
+                                        [ngClass]="{'is-invalid': eventForm.submitted && (plannedBudgetAmount.invalid || validationErrors?.plannedBudgetAmount)}"
+                                        required i18n-placeholder="@@event-budget-placeholder"
+                                        placeholder="Enter event planned budget" />
+                                </div>
+                                <div *ngIf="eventForm.submitted && plannedBudgetAmount.invalid" class="invalid-feedback"
+                                    i18n="@@event-budget-validation">
+                                    Planned budget is invalid
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-dark" i18n="@@button-save">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

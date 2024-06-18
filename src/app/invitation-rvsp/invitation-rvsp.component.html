@@ -1,0 +1,86 @@
+<div class="container-fluid">
+    <div class="row mt-5 justify-content-center text-center header">
+        <div class="col-10">
+            <h1 class="my-3 display-1">{{invitation.header}}</h1>
+            <p class="my-5 fs-4">{{invitation.eventDescription}}</p>
+            <h3 class="mt-5 display-5" style="font-family: 'Pushkin High'">{{invitation.eventDate}}</h3>
+        </div>
+    </div>
+    <div class="row justify-content-center text-center" *ngIf="invitation.imageUrl != null">
+        <div class="col" style="position: relative; padding: 0;">
+            <div class="custom-shape-divider-top-1714677228">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill">
+                    </path>
+                </svg>
+            </div>
+            <div class="cover-image" [style.background-image]="'url(' + invitation.imageUrl + ')'"></div>
+            <div class="custom-shape-divider-bottom-1714676661">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center text-center mb-5" [ngClass]="invitation.imageUrl == null ? 'mt-5' : ''">
+        <div class="col-10">
+            <h5 class="my-5" i18n="@@invitation-venue">Venue of the celebration</h5>
+            <div class="text-center mt-4">
+                <span class="d-block display-4" style="font-family: 'Pushkin High'">{{invitation.eventPlace}}</span>
+                <span class="d-block">{{invitation.eventPlaceAddress}}</span>
+                <span class="d-block display-4 my-3">{{invitation.eventTime}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mb-5">
+        <div class="col-10">
+            <h5 class="my-5 text-center" i18n="@@invitation-attendance">Attendance confirmation</h5>
+            <form #rvspForm="ngForm" (submit)="onRvspFormSubmit()">
+                <div class="row mb-3">
+                    <div class="col-12 col-sm-6 mb-2">
+                        <input type="text" class="form-control" placeholder="First name"
+                            i18n-placeholder="@@invitation-first-name" [(ngModel)]="rvspInfo.name" name="name">
+                    </div>
+                    <div class="col-12 col-sm-6 mb-2">
+                        <input type="text" class="form-control" placeholder="Last name"
+                            i18n-placeholder="@@invitation-last-name" [(ngModel)]="rvspInfo.surname" name="surname">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="label" i18n="@@invitation-attendance-question">Will you be attending?</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="presence" id="presence_yes" value="yes"
+                                [(ngModel)]="selectedConfirmOption" (change)="onPresenceChange($event)">
+                            <label class="form-check-label" for="presence_yes" i18n="@@invitation-attendance-yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="presence" id="presence_no" value="no"
+                                [(ngModel)]="selectedConfirmOption" (change)="onPresenceChange($event)">
+                            <label class="form-check-label" for="presence_no" i18n="@@invitation-attendance-no">
+                                No
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="presence" id="presence_unknown"
+                                value="unknown" [(ngModel)]="selectedConfirmOption" (change)="onPresenceChange($event)">
+                            <label class="form-check-label" for="presence_unknown"
+                                i18n="@@invitation-attendance-unknown">
+                                Still not sure, I will let you know my decision later
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-outline-dark" i18n="@@button-submit-send">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+.notification-group{
+    overflow: auto;
+    max-height: 10rem !important;
+    border: solid 1px var(--bs-border-color-translucent);
+    padding: 1em;
+}

@@ -1,0 +1,225 @@
+<app-navbar></app-navbar>
+<main class="with-sidebar">
+    <div class="container ">
+        <div class="row mx-3 mx-md-5 mt-5 justify-content-center">
+            <div class="col-12 col-md-10 ">
+                <h3 class="mb-5 mt-3" i18n="@@budget-header">Budget</h3>
+            </div>
+        </div>
+        <div class="row mx-3 mx-md-5 mb-2 justify-content-center">
+            <div class="col-10 col-md-9">
+                <div class="card border-dark  mb-3">
+                    <div class="card-header" i18n="@@budget-expected">Expected</div>
+                    <div class="fs-2 text-center pb-3">{{expectedAmount | currency: currencyCode: 'symbol' : '1.0-2' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-3 mx-md-5 mb-2 justify-content-center">
+            <div class="col-10 col-md-3">
+                <div class="card text-bg-dark mb-3">
+                    <div class="card-header" i18n="@@budget-plan">Plan</div>
+                    <div class="fs-2 text-center pb-3">{{plannedAmount | currency: currencyCode: 'symbol' : '1.0-2' }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-3">
+                <div class="card text-bg-danger mb-3">
+                    <div class="card-header" i18n="@@budget-paid">Paid</div>
+                    <div class="fs-2 text-center pb-3">{{paidAmount | currency: currencyCode: 'symbol' : '1.0-2' }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-3">
+                <div class="card text-bg-secondary mb-3">
+                    <div class="card-header" i18n="@@budget-remain">Remain</div>
+                    <div class="fs-2 text-center pb-3">{{(plannedAmount - paidAmount) | currency: currencyCode: 'symbol'
+                        : '1.0-2' }}</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-3 mx-md-5 mb-2 justify-content-center">
+        <div class="col-12 col-md-10 ">
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-dark" i18n="@@button-add-category"
+                    (click)="openBudgetCategoryForm(addBudgetCategory)"><i class="bi bi-plus-circle-dotted">
+                    </i> Add category</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row mx-3 mx-md-5 justify-content-center">
+        <div class="col-12 col-md-10 ">
+            <div *ngIf="budgetCategoryList.length===0" i18n="@@empty-list">
+                Empty list
+            </div>
+            <div class="accordion budget" id="accordionBudget">
+                <div class="accordion-item" *ngFor="let budgetCategory of budgetCategoryList">
+                    <h2 class="accordion-header">
+                        <div class="d-flex justify-content-between ">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                [attr.data-bs-target]="'#budgetCategory_'+budgetCategory.id" aria-expanded="true"
+                                [attr.aria-controls]="'budgetCategory_'+budgetCategory.id">
+                                {{budgetCategory.name}}
+                            </button>
+                            <div class="dropdown">
+                                <button class="btn btn-link link-dark dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                                <ul class="dropdown-menu  dropdown-menu-end">
+                                    <li><button class="dropdown-item" data-bs-toggle="offcanvas"
+                                            data-bs-target="#addBudgetCategory" aria-controls="addBudgetCategory"
+                                            (click)="editBudgetCategory(budgetCategory); openBudgetCategoryForm(addBudgetCategory)"
+                                            i18n="@@button-edit">Edit</button></li>
+                                    <li><button class="dropdown-item link-danger"
+                                            (click)="deleteBudgetCategory(budgetCategory.id)"
+                                            i18n="@@button-delete">Delete</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </h2>
+                    <div [id]="'budgetCategory_'+budgetCategory.id" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th i18n="@@budget-expense-name">Expense name</th>
+                                        <th i18n="@@budget-description">Description</th>
+                                        <th i18n="@@budget-paid-amount">Paid amount</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let payment of budgetCategory.paymentList; let i = index">
+                                        <th scope="row" style="width: 0.5em;">{{i+1}}</th>
+                                        <td style="width: 15em;">{{payment.expenseName}}</td>
+                                        <td>{{payment.description}}
+                                        </td>
+                                        <td style="width: 6em;">{{payment.amount | currency: currencyCode: 'symbol' :
+                                            '1.0-2' }}</td>
+                                        <td style="width: 1em;">
+                                            <div class="dropdown">
+                                                <button class="btn btn-link link-dark dropdown-toggle" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                                <ul class="dropdown-menu  dropdown-menu-end">
+                                                    <li><button class="dropdown-item" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#addPaymentForm"
+                                                            aria-controls="addPaymentForm"
+                                                            (click)="editPayment(budgetCategory.id, payment); openAddPaymentForm(addPayment, budgetCategory.id)"
+                                                            i18n="@@button-edit">Edit</button>
+                                                    </li>
+                                                    <li><button class="dropdown-item link-danger"
+                                                            (click)="deletePayment(budgetCategory.id, payment.id)"
+                                                            i18n="@@button-delete">Delete</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="d-flex justify-content-end me-1 mb-1">
+                            <button type="button" class="btn btn-link link-dark" i18n="@@button-add-payment"
+                                (click)="openAddPaymentForm(addPayment, budgetCategory.id)"><i
+                                    class="bi bi-plus-circle-dotted"></i>
+                                Add payment</button>
+                        </div>
+                    </div>
+                    <div class="d-flex mx-3 mb-4">
+                        <div class="budget-total text-center mx-3">
+                            <div class="label" i18n="@@budget-plan">Plan</div>
+                            <div class="fs-4 fs-md-3 amount">{{budgetCategory.plannedAmount | currency: currencyCode:
+                                'symbol' : '1.0-2' }}</div>
+                        </div>
+                        <div class="budget-total text-center mx-3">
+                            <div class="label" i18n="@@budget-paid">Paid</div>
+                            <div class="fs-4 fs-md-3 amount">{{budgetCategory.paidAmount | currency: currencyCode:
+                                'symbol' : '1.0-2' }}</div>
+                        </div>
+                        <div class="budget-total text-center mx-3">
+                            <div class="label" i18n="@@budget-remain">Remain</div>
+                            <div class="fs-4 fs-md-3 amount">{{(budgetCategory.plannedAmount -
+                                budgetCategory.paidAmount) | currency: currencyCode: 'symbol' : '1.0-2' }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+<ng-template #addBudgetCategory let-offcanvas>
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="addBudgetCategoryLabel" i18n="@@budget-details">Budget category details</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form id="budgetCategoryForm" #addBudgetCategoryForm="ngForm"
+            (submit)="onAddBudgetCategoryFormSubmit(offcanvas)">
+            <div class="mb-3">
+                <label for="budgetCategoryName" class="form-label" i18n="@@budget-name">Name</label>
+                <input type="text" class="form-control" id="budgetCategoryName" [(ngModel)]="newBudgetCategory.name"
+                    name="name" i18n-placeholder="@@budget-name-placeholder" placeholder="Enter budget category name">
+            </div>
+            <div class="mb-3">
+                <label for="budgetCategoryDescription" class="form-label"
+                    i18n="@@budget-description">Description</label>
+                <textarea class="form-control" id="budgetCategoryDescription"
+                    [(ngModel)]="newBudgetCategory.description" name="description"
+                    i18n-placeholder="@@budget-description-placeholder"
+                    placeholder="Enter budget category description"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="budgetCategoryPlannedAmount" class="form-label" i18n="@@budget-planned-amount">Planned
+                    amount</label>
+                <input type="number" class="form-control" id="budgetCategoryPlannedAmount"
+                    [(ngModel)]="newBudgetCategory.plannedAmount" name="plannedAmount"
+                    i18n-placeholder="@@budget-planned-placeholder" placeholder="Enter planned amount">
+            </div>
+            <button type="submit" class="btn btn-dark" i18n="@@button-save">Save</button>
+        </form>
+    </div>
+</ng-template>
+
+<ng-template #addPayment let-offcanvasPayment>
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="addPaymentFormLabel" i18n="@@budget-payment-details">Payment details</h5>
+        <button type="button" class="btn-close" aria-label="Close"
+            (click)="offcanvasPayment.dismiss('Cross click')"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form id="taskForm" #addPaymentForm="ngForm" (submit)="onAddPaymentFormSubmit(offcanvasPayment)">
+            <div class="mb-3">
+                <label for="paymentExpenseName" class="form-label" i18n="@@budget-expense-name">Expense name</label>
+                <input type="text" class="form-control" id="paymentExpenseName" [(ngModel)]="newPayment.expenseName"
+                    name="expenseName" i18n-placeholder="@@budget-expense-name-placeholder"
+                    placeholder="Enter expense name">
+            </div>
+            <div class="mb-3">
+                <label for="paymentDescription" class="form-label" i18n="@@budget-description">Description</label>
+                <textarea class="form-control" id="paymentDescription" [(ngModel)]="newPayment.description"
+                    name="description" i18n-placeholder="@@budget-expense-description-placeholder"
+                    placeholder="Enter expense description"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="paymentAmount" class="form-label" i18n="@@budget-amount">Amount</label>
+                <input type="number" class="form-control" id="paymentAmount" [(ngModel)]="newPayment.amount"
+                    name="amount" i18n-placeholder="@@budget-amount-placeholder" placeholder="Enter amount">
+            </div>
+
+            <button type="submit" class="btn btn-dark" i18n="@@button-save">Save</button>
+        </form>
+    </div>
+
+</ng-template>

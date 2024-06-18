@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --offcanvas-width: 270px;
+    --navbar-height: 55px;
+    --input-color: gray;
+}
+
+
+
+.with-sidebar{
+    margin-top: 5rem;
+}
+
+main{
+    margin-top: var(--navbar-height);
+    margin-bottom: 3rem !important;
+}
+
+.btn-link{
+    text-decoration: none;
+}
+
+.btn-link:hover{
+    color: gray !important;
+}
+
+.breadcrumb-item a{
+    text-decoration: none;
+}
+
+.form-check-input,
+.form-control {
+    background-color: transparent;
+    /* border: 2px solid #c9c9c9; */
+}
+
+.form-check-input:checked {
+    background-color: var(--input-color);
+    border-color: var(--input-color);
+}
+
+.form-check-input:active,
+.form-control:active {
+    border-color: var(--input-color);
+}
+
+.form-check-input:focus,
+.form-control:focus {
+    border-color: var(--input-color);
+    box-shadow: 0 0 0 0.25rem #c9c9c93f;
+}
+
+.form-text,
+.form-label {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--bs-body-color);
+}
+
+.vh-100-custom{
+    height: 100vh !important;
+}
+
+
+.h-custom {
+    height: calc(100% - 73px);
+}
+
+.invalid-feedback{
+    display: block;
+}
+
+.toast{
+    z-index: var(1056)!important;
+}
+
+@media (min-width: 992px) {
+    .with-sidebar{
+        margin-left: var(--offcanvas-width);
+        margin-top: 7rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .vh-100-custom{
+        height: auto !important;
+    }
+}

@@ -37,6 +37,26 @@
           }
         }
       }
+    },
+    {
+      "label": "npm: start-ru",
+      "type": "npm",
+      "script": "start-ru",
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "owner": "typescript",
+          "source": "ts",
+          "applyTo": "closedDocuments",
+          "fileLocation": ["relative", "${cwd}"],
+          "pattern": "$tsc",
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^.*Compilation complete.*$",
+            "endsPattern": "^.*Compiled successfully.*$"
+          }
+        }
+      ]
     }
   ]
 }

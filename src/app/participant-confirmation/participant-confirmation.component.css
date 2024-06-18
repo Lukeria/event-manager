@@ -1,0 +1,19 @@
+
+.circle {
+    position: relative;
+    background: var(--bs-green);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .checkmark {
+    position: absolute;
+    transform: rotate(45deg) translate(-50%, -50%);
+    left: 35%;
+    top: 45%;
+    height: 0.67rem;
+    width: 0.33rem;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+  }
